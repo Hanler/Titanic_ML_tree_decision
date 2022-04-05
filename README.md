@@ -10,6 +10,11 @@ Short info
 <b>About the project:</b>
 This project predicts will people stay alive or not using one of the machine learning algorithms - `decision tree`.
 
+<b>Results:</b>
+`Decision tree` has showed better results then `random forest`.
+`Accuracy` of trained model is `99.28%`.
+However, the accuracy depends on the argument `max_depth` during initializing of model. `Max_depth=3` showed the best result.
+
 <b>Getting started:</b>
 If you want to download this project, you might use `git` or download the project as an archive straight from `GitHub.`
 

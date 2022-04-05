@@ -1,21 +1,11 @@
 # Project <Titanic Machine Learning>
 # Made by Daniil Khmelnytskyi
-# 04.04.2022
+# 05.04.2022
 
 # Imports 
 import numpy as np
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
-
-def initialize_tree():
-    """
-        Initializes decision tree and return it
-    """
-
-    model = DecisionTreeClassifier()
-
-    return model
-
 
 def predict(model, X_test, train_data_ids):
     """
@@ -54,21 +44,21 @@ def calc_accuracy():
 
 if __name__ == "__main__":
     # Get data to train && test
-    train_data = pd.read_csv("data/train.csv")
+    train_data = pd.read_csv("data/train.csv") # read training data
 
-    test_data = pd.read_csv("data/test.csv")
+    test_data = pd.read_csv("data/test.csv") # read testing data
 
     features = ["Pclass", "Sex", "SibSp", "Parch"] # columns to extract from csv
 
     X = pd.get_dummies(train_data[features]) # converts categorical data into indicator variables (sex => male && female)
     y = train_data["Survived"] # extract column 'Survived'
 
-    model = DecisionTreeClassifier(random_state=1, max_depth=3)
+    model = DecisionTreeClassifier(random_state=1, max_depth=3) # initializes a model
 
-    model.fit(X, y)
+    model.fit(X, y) # trains the model
     
     X_test = pd.get_dummies(test_data[features]) # converts categorical data into indicator variables (sex => male && female)
 
-    predict(model, X_test, test_data.PassengerId)
+    predict(model, X_test, test_data.PassengerId) # makes predictions on trained model
 
-    calc_accuracy()
+    calc_accuracy() # calculates the accuracy of predictions
