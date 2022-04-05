@@ -8,7 +8,7 @@ Short info
 <b>Creator:</b> `Daniil Khmelnytskyi`
 
 <b>About the project:</b>
-This project predicts will people stay alive or not using one of the machime learning algorithms - `decision tree`.
+This project predicts will people stay alive or not using one of the machine learning algorithms - `decision tree`.
 
 <b>Getting started:</b>
 If you want to download this project, you might use `git` or download the project as an archive straight from `GitHub.`
